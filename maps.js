@@ -56,14 +56,14 @@ let employees = [
 }
 ]
 
-//function loopsUpdates (array) { //function looping through the array and updates
- //   const newArray = []; //pushing the updates and stores them
- //   for (let item of array) { // for loop iteration
- //       newArray.push(item.name);  //Defining what to push
- //   }
- //   return newArray; //Returning the new array
-//}
-//console.log (loopsUpdates(employees)); // Expected [ 'john', 'rose', 'kilman', 'james', 'lilian' ]
+function loopsUpdates (array) { //function looping through the array and updates
+   const newArray = []; //pushing the updates and stores them
+   for (let item of array) { // for loop iteration
+       newArray.push(item.name);  //Defining what to push
+    }
+    return newArray; //Returning the new array
+}
+console.log (loopsUpdates(employees)); // Expected [ 'john', 'rose', 'kilman', 'james', 'lilian' ]
 
 /**
  * Making the function more dynamic to return different values as provided in the array
@@ -84,7 +84,7 @@ console.log (loopsUpdates(employees, id)); // Expected [ 100, 101, 102, 103, 104
 console.log (loopsUpdates(employees, department)); // ['procurement','marketing','operations','engineering', 'corporate affairs']
 console.log (loopsUpdates(employees, projectsHandled)); //Expected [ 2, 3, 8, 10, 2 ]
 
-// Returnin employee name
+// ReturninG employee name
 function name (item){
     return item.name;
 }
@@ -100,3 +100,36 @@ function department (item){
 function projectsHandled (item){
     return item.projectsHandled;
 }
+
+//---------------------------------------USING MAP----------------------------------------
+/**
+ * We  are going to modify the function:
+ */
+ function name (item){
+    return item.name;
+ }
+const eEmp = employees.map(function (item){
+    console.log(item);
+}) // Expect the entire object function
+
+// ----------------let us use arow fuctions as callbacks-----
+
+//using arow fuctions: Option 1:
+const eEmp = employees.map( (item) =>{
+    console.log(item);
+})
+// let us use arow fuctions: Option 2:
+const eEmp = employees.map( (item) => console.log(item)) 
+
+
+//Using arrow functions: Option 2:
+const eName = employees.map(function (item){
+   return item.name;  // Expect the names of employees in an array
+})
+/const eName =employees.map((item) => console.log(item.name));
+//Using arrow functions: Option 3:
+const eName = employees.map((item) => item.name);
+
+//Using arrow functions: Option 4:
+const eName = employees.map(item => item.name); // Clean and readable
+console.log(eName);
