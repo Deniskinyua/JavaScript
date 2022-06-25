@@ -2,6 +2,8 @@
  * method includes();
  * 
  * syntax: (i) .includes(searchEelement), (ii) .includes(searchEelement, fromIndex)
+ * 
+ * Return value: (Boolean) true if found, false otherwise
  */
 
 
