@@ -43,44 +43,6 @@
 
 
  let A = [2,2,3,4,3,3,2, 2, 1, 1, 2,5];
- // you can write to stdout for debugging purposes, e.g.
- // console.log('this is a debug message');
- 
- function solution(A) {
-     // write your code in JavaScript (Node.js 8.9.4)
-     let arrayALength = A.length;
-     //First lest us check the segements
-     if (arrayALength === 0){
-         return 0;
-     }
-     //let us define our initials
-     let num = 0;
-     let initialNum = 0;
-     //
-     for (let seg = 1; seg < arrayALength-1; seg++){
-         if (((A[seg]-initialNum)*(A[seg+1] -A[seg])) < 0){
-             num++;
-             initialNum = A[seg];
-         }
- 
-     }
- 
-     if (num === 0){
-         if (A[0] === A[arrayALength-1]){
-             return 1;
-             return 2;
-         }
-        
-     }
- 
-     return num +2;
- }
- 
- 
- //
- // you can write to stdout for debugging purposes, e.g.
- // console.log('this is a debug message');
- 
  function solution(A) {
      // write your code in JavaScript (Node.js 8.9.4)
  
