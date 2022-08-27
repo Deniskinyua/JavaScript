@@ -1,0 +1,23 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "This repo contains my work on JavaScript",
+  "main": "ArrowFunctions.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deniskinyua/JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deniskinyua/JavaScript/issues"
+  },
+  "homepage": "https://github.com/Deniskinyua/JavaScript#readme",
+  "devDependencies": {
+    "jest": "^29.0.1"
+  }
+}
